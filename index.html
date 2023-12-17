@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
     <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
+    <style>
+        .errorMsg {
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,23 +20,43 @@
                 <li><a href="aboutme.html">Aboutme</a></li>
                 <li><a href="parcours.html">Parcours</a></li>
                 <li><a href="experience.html">Experience</a></li>
-                <li><a href="contact.html">Accueil</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>        
         </nav>
     </header>    
 
     <section>
-      <input type="text" required placeholder="Your name"><br>
-      <label for="email"></label><br> 
-      <input type="email" required placeholder="Email"><br> 
-      <label for="message"></label><br>
-      <textarea id="message"required placeholder="Message" rows="4" cols="50" required></textarea><br><br>
-      <button type="submit">Submit</button>
-      <button type="reset">Reset</button>
+        <form id="contact-form" class="contact__form">
+          <div>
+            <span>Nom:</span>
+            <input class="contact__form-el contact__form-el--name" type="text" placeholder="Votre nom" spellcheck="false">            
+          </div>
+          <span class="errorMsg" id="nonError"> -</span>
+          <br>
+          <div>
+            <span>Prenom:</span>
+            <input class="contact__form-el contact__form-el--lastename" type="text" placeholder="Votre prenom" spellcheck="false">
+          </div>
+          <span class="errorMsg" id="prenomError"> -</span>
+          <br>
+          <div>
+            <span>Email:</span>
+            <input class="contact__form-el contact__form-el--email" type="email" placeholder="Votre email" spellcheck="false">
+          </div>
+          <span class="errorMsg" id="emailError"> -</span>
+          <br>
+          <textarea class="contact__form-el contact__form-el--message" placeholder="Votre message"></textarea>
+          <span class="errorMsg" id="messageError"> -</span>
+          <br>
+          <button class="contact__form-el contact__form-el--submit">Envoyer</button>
+          <span class="errorMsg" id="envoieError"> -</span>
+        </form>
     </section>
 
     <footer>
       <div id="footer">Contact: | Email: <a href="mailto:yousra.fourati@esprit.tn">yousra.fourati@esprit.tn</a> | Linkedin: <a href="https://www.linkedin.com/">Yousra Fourati</a> | Telephone: (+216)28121431 </div>
     </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
